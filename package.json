@@ -1,0 +1,11 @@
+{
+  "name": "nodemedia-client-with-zoom",
+  "version": "0.2.10",
+  "description": "This project is the react-native packaging of NodeMediaClient-Android and NodeMediaClient-iOS SDK.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chen Mingliang",
+  "license": ""
+}

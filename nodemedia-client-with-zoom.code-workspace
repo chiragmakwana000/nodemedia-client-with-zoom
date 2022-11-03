@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../nodemedia-client-with-zoom/android"
+		},
+		{
+			"path": "../nodemedia-client-with-zoom/ios"
+		},
+		{
+			"path": "../nodemedia-client-with-zoom/node_modules"
+		}
+	],
+	"settings": {}
+}
