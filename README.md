@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/dm/nodemedia-client-with-zoom.svg)](https://www.npmjs.com/package/nodemedia-client-with-zoom)  
 This project is the react-native packaging of NodeMediaClient-Android and NodeMediaClient-iOS SDK.
 Complete live publish and play functions, providing the exact same API call. You can publish two platforms just by developing one set of programs.  
-[中文介绍](https://github.com/NodeMedia/nodemedia-client-with-zoom/blob/master/README_CN.md)
+[README](https://github.com/chiragmakwana000/nodemedia-client-with-zoom/blob/master/README.md)
 
 ## 1.install
 yarn add nodemedia-client-with-zoom
