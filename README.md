@@ -106,4 +106,3 @@ ZoomView.defaultProps = {
 
 ## Demo project
 ![img](https://github.com/chiragmakwana000/nodemedia-client-with-zoom/blob/master/example.gif)
-https://github.com/chiragmakwana000/nodemedia-client-with-zoom/blob/master/example.gif
