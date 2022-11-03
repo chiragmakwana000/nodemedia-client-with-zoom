@@ -1,11 +1,18 @@
 {
   "name": "nodemedia-client-with-zoom",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "This project is the react-native packaging of NodeMediaClient-Android and NodeMediaClient-iOS SDK.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "react-native",
+    "node media client",
+    "live stream",
+    "zoom in",
+    "zoom out"
+  ],
   "author": "Chirag Makwana",
   "license": ""
 }
