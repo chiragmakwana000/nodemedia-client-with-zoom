@@ -2,8 +2,8 @@
 //  RCTNodeMediaClient.m
 //  RCTNodeMediaClient
 //
-//  Created by Mingliang Chen on 2018/2/28.
-//  Copyright © 2018年 Mingliang Chen. All rights reserved.
+//  Created by Chirag Makwana & Dhaval Goswami on 2022/11/03.
+//  Copyright © 2017年 NodeMedia Chen. All rights reserved.
 //
 
 #import "RCTNodeMediaClient.h"

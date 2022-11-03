@@ -2,7 +2,7 @@
 //  RTCNodeCameraManager.m
 //
 //
-//  Created by Mingliang Chen on 2017/11/29.
+//  Created by Chirag Makwana & Dhaval Goswami on 2022/11/03.
 //  Copyright © 2017年 NodeMedia. All rights reserved.
 //
 #import <React/RCTViewManager.h>
