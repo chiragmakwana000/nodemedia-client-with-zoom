@@ -1,6 +1,6 @@
 {
   "name": "nodemedia-client-with-zoom",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "This project is the react-native packaging of NodeMediaClient-Android and NodeMediaClient-iOS SDK.",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,6 @@
     "zoom in",
     "zoom out"
   ],
-  "author": "Chirag Makwana",
+  "author": "Chirag Makwana & Dhaval Goswami",
   "license": ""
 }

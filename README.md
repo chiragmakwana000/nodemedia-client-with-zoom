@@ -15,94 +15,39 @@ yarn add nodemedia-client-with-zoom
 cd ios  
 pod install
 
+iOS Setup
+To use react-native-nodemediaclient in your iOS project, add the following line to your Podfile:
+
+pod 'NodeMediaClient', :path => '../node_modules/nodemedia-client-with-zoom/NodeMediaClient'
+
 ## 3.Example
 
 ```
-import {  NodeCameraView } from 'nodemedia-client-with-zoom';
-let _prevPinch = 1;
-const ZOOM_F = Platform.OS === 'ios' ? 0.5 : 0.009;
+import {  NodeCameraWithZoom } from 'nodemedia-client-with-zoom';
 
-
-  const [zoom, setZoom] = useState(0.0);
-
- <ZoomView
-        onPinchStart={() => {
-          _prevPinch = 1;
-        }}
-        onPinchEnd={() => {
-          _prevPinch = 1;
-        }}
-        onPinchProgress={p => {
-          let p2 = p - _prevPinch;
-          if (p2 > 0 && p2 > ZOOM_F) {
-            _prevPinch = p;
-            setZoom(Math.min(zoom + ZOOM_F, Platform.OS === 'ios' ? 100 : 1));
-          } else if (p2 < 0 && p2 < -ZOOM_F) {
-            _prevPinch = p;
-            setZoom(Math.max(zoom - ZOOM_F, 0));
-          }
-        }}>
-
-<NodeCameraView
-  zoomScale={zoom}
-  autopreview={true}
-  smoothSkinLevel={3}
-  style={{ height: 400 }}
-  ref={(vb) => { this.vb = vb }}
-  outputUrl = {"rtmp://192.168.0.10/live/stream"}
-  camera={{ cameraId: 1, cameraFrontMirror: true }}
-  audio={{bitrate: 32000, profile: 1, samplerate: 48000}}
-  video={{
-           fps: 30,
-           preset: 4,
-           profile: 1,
-           bitrate: 900000,
-           videoFrontMirror: true,
-          }}
-  />
- </ZoomView>
-
-
- // use this as component
-
-
- import React from 'react';
-import { View } from 'react-native';
-import {
-  PinchGestureHandler,
-  State,
-} from 'react-native-gesture-handler';
-export default class ZoomView extends React.Component {
-  onGesturePinch = ({ nativeEvent }) => {
-    this.props.onPinchProgress(nativeEvent.scale);
-  }
-  onPinchHandlerStateChange = event => {
-    if (event.nativeEvent.state === State.END) {
-      this.props.onPinchEnd();
-    }
-    else if (event.nativeEvent.oldState === State.BEGAN && event.nativeEvent.state === State.ACTIVE) {
-      this.props.onPinchStart();
-    }
+ const cameraProps = { cameraId: 1, cameraFrontMirror: true };
+  const audioProps = { bitrate: 32000, profile: 1, samplerate: 48000 };
+  const videoProps = {
+    fps: 30,
+    preset: 4,
+    profile: 1,
+    bitrate: 900000,
+    videoFrontMirror: true,
   };
-  render() {
-    return (
-      <PinchGestureHandler
-        onGestureEvent={this.onGesturePinch}
-        onHandlerStateChange={this.onPinchHandlerStateChange}
-      >
-        <View style={this.props.style}>
-          {this.props.children}
-        </View>
-      </PinchGestureHandler>
-    );
-  }
-}
-ZoomView.defaultProps = {
-  onPinchProgress: (p) => { },
-  onPinchStart: () => { },
-  onPinchEnd: () => { }
-}
+
+  return (
+    <NodeCameraWithZoom
+      outputUrl="rtmp://192.168.0.10/live/stream"
+      cameraProps={cameraProps}
+      audioProps={audioProps}
+      videoProps={videoProps}
+      style={{ height: 400 }} // Adjust style as needed
+    />
+  );
+
+
 ```
 
 ## Demo project
+
 ![img](https://github.com/chiragmakwana000/nodemedia-client-with-zoom/blob/master/example.gif)
